@@ -6,7 +6,9 @@ def it_was_ok
   # We can use ranges (a..b) inside a where method.
   #
   # Find the id, title, and score of all movies with scores between 2 and 3
-
+  Movie
+    .select(:id, :title, :score)
+    .where( yr: 1970..1979, score: 2..3 ) 
 end
 
 def harrison_ford
